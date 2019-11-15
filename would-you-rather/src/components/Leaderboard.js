@@ -5,15 +5,9 @@ import { withStyles } from "@material-ui/core/styles";
 import {
   Avatar,
   Box,
-  Badge,
-  Button,
   Card,
   CardHeader,
-  CardActions,
-  Chip,
   Paper,
-  Tabs,
-  Tab,
   Typography,
   Divider,
   CardContent

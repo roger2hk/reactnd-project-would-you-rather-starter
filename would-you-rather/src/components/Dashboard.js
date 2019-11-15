@@ -16,6 +16,8 @@ import {
   Tab
 } from "@material-ui/core";
 
+import PropTypes from "prop-types";
+
 const styles = theme => ({
   root: {
     background: "#eeeeee",
@@ -141,5 +143,11 @@ function mapStateToProps({ authedUser, users, questions }) {
     questions
   };
 }
+
+Dashboard.propTypes = {
+  authedUser: PropTypes.string,
+  users: PropTypes.object,
+  questions: PropTypes.object
+};
 
 export default withStyles(styles)(connect(mapStateToProps)(Dashboard));

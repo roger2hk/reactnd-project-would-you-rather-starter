@@ -1,9 +1,5 @@
 import React, { Component, Fragment } from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 
 import Nav from "./Nav";
@@ -14,6 +10,8 @@ import Leaderboard from "./Leaderboard";
 import { handleInitialData } from "../actions/shared";
 import Question from "./Question";
 import NewQuestion from "./NewQuestion";
+
+import PropTypes from "prop-types";
 
 class App extends Component {
   componentDidMount() {
@@ -50,5 +48,9 @@ function mapStateToProps({ authedUser }) {
     authedUser
   };
 }
+
+App.propTypes = {
+  authedUser: PropTypes.string
+};
 
 export default connect(mapStateToProps)(App);
